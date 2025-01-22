@@ -27,7 +27,7 @@ resource "aws_internet_gateway" "gateway" {
 
 
 
-resource "aws_route_table" "route_table" {
+resource "aws_route_table" "route-table" {
   vpc_id = aws_vpc.main_vpc.id
 
   route {
@@ -42,11 +42,11 @@ resource "aws_route_table" "route_table" {
 
 resource "aws_route_table_association" "route_table_association" {
   subnet_id      = aws_subnet.subnetwork.id
-  route_table_id = aws_route_table.route_table.id
+  route_table_id = aws_route_table.route-table.id
 }
 
 # bucket s3
-resource "aws_s3_bucket" "s3_bucket" {
+resource "aws_s3_bucket" "s3-bucket" {
     bucket = var.bucket_name
 }
 
@@ -132,8 +132,8 @@ resource "aws_iam_role_policy" "role_policy" {
         ]
         Effect = "Allow"
         Resource = [
-          aws_s3_bucket.s3_bucket.arn,
-          "${aws_s3_bucket.s3_bucket.arn}/*"
+          aws_s3_bucket.s3-bucket.arn,
+          "${aws_s3_bucket.s3-bucket.arn}/*"
         ]
       }
     ]

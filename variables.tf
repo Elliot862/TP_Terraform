@@ -25,7 +25,7 @@ variable "instance_AMI" {
 # Nom du bucket S3
 variable "bucket_name" {
     type = string
-    default = "bucket_001" 
+    default = "bucket-001" 
     }
 
 # Role

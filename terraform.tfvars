@@ -8,7 +8,7 @@ instance_type = "t2.micro"
 instance_AMI = "ami-06e02ae7bdac6b938"
 
 # Nom du bucket S3
-bucket_name = "bucket_001"
+bucket_name = "bucket-001534561523456412415125"
 
 # Role
 role_name = "connect_ec2_to_s3"
